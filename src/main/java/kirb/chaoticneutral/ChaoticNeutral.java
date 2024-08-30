@@ -22,7 +22,7 @@ public class ChaoticNeutral implements ModInitializer, GameStartEntrypoint, Reci
 		LOGGER.info("Initializing some wacky items...");
 		ModItems.init();
 		LOGGER.info("and entities too while we are at it !");
-
+		//nothing here yet
 		LOGGER.info("Generating some sounds, otherwise we are deaf");
 		ModSounds.init();
 		LOGGER.info("Chaos level has been successfully set to 100%. Ready commander!");
@@ -30,7 +30,8 @@ public class ChaoticNeutral implements ModInitializer, GameStartEntrypoint, Reci
 
 	@Override
 	public void beforeGameStart() {
-		EntityHelper.createEntity(FlintlockProjectile.class, 2000, "flintlockProjectile", () -> new SnowballRenderer(ModItems.lead_ball));
+		// Flintlock Projectile creation upon game start
+		EntityHelper.createEntity(FlintlockProjectile.class, 2000, "flintlockProjectile", () -> new SnowballRenderer(ModItems.iron_bullet));
 	}
 
 	@Override
@@ -40,7 +41,7 @@ public class ChaoticNeutral implements ModInitializer, GameStartEntrypoint, Reci
 
 	@Override
 	public void onRecipesReady() {
-		LOGGER.info("Now time to start writing those recipes");
+		// Initialises Recipes upon onRecipesReady() activation
 		ModRecipesCrafting.init();
 	}
 

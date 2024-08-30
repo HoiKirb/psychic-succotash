@@ -11,13 +11,15 @@ import net.minecraft.core.world.World;
 import java.util.Random;
 
 public class FlintlockItem extends Item {
-	// Requested by mzov4J
+	// Requested by mzov4J on the BTA Discord
+	// https://discord.com/channels/1138825919088312403/1171909695276056687
+
 	public FlintlockItem(String name, int id) {
 		super(name, id);
 	}
 
 	public ItemStack onUseItem(ItemStack itemstack, World world, EntityPlayer entityplayer) {
-		if (entityplayer.hasItem(ModItems.lead_ball)) {
+		if (entityplayer.hasItem(ModItems.iron_bullet)) {
 			world.playSoundAtEntity(entityplayer, entityplayer, "random.bow", 0.5f, 0.4f / (new Random().nextFloat() * 0.2f + 0.3f));
 			FlintlockProjectile Flintlock_pistol = new FlintlockProjectile(world, entityplayer);
 			float pitch = entityplayer.xRot;
@@ -31,8 +33,8 @@ public class FlintlockItem extends Item {
 			Flintlock_pistol.setHeading(motionX, motionY, motionZ, 4f, 0.2f);
 			world.entityJoinedWorld(Flintlock_pistol);
 
-			itemstack.damageItem(1, entityplayer);
-			entityplayer.inventory.consumeInventoryItem(ModItems.lead_ball.id);
+			//itemstack.damageItem(1, entityplayer);
+			entityplayer.inventory.consumeInventoryItem(ModItems.iron_bullet.id);
 		}
 		return itemstack;
 	}

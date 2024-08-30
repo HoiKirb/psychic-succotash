@@ -25,7 +25,7 @@ public class FlintlockProjectile extends EntityProjectile {
 			return;
 		}
 		if (hitResult.hitType == HitResult.HitType.ENTITY ) {
-			hitResult.entity.hurt(this.owner, 16, DamageType.COMBAT);
+			hitResult.entity.hurt(this.owner, 20, DamageType.COMBAT);
 		}
 		this.remove();
 	}
