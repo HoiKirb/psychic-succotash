@@ -8,7 +8,7 @@ import net.minecraft.client.render.stitcher.TextureRegistry;
 import net.minecraft.core.block.Block;
 
 public class CodpieBlockModel<T extends Block> extends BlockModelStandard<T> {
-	protected IconCoordinate pizzaInner = TextureRegistry.getTexture(ChaoticNeutral.MOD_ID + ":block/pizza_inner");
+	protected IconCoordinate codInside = TextureRegistry.getTexture(ChaoticNeutral.MOD_ID + ":block/pizza_inner");
 
 	public CodpieBlockModel(Block block){
 		super(block);

@@ -4,10 +4,8 @@ import kirb.chaoticneutral.ChaoticNeutral;
 import kirb.chaoticneutral.Utilities;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemArmor;
-import net.minecraft.core.item.ItemBed;
 import net.minecraft.core.item.ItemFood;
 import net.minecraft.core.item.material.ArmorMaterial;
-import org.lwjgl.openal.Util;
 import turniplabs.halplibe.helper.ArmorHelper;
 import turniplabs.halplibe.helper.ItemBuilder;
 

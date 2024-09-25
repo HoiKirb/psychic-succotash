@@ -11,7 +11,6 @@ import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.util.phys.AABB;
 import net.minecraft.core.world.World;
 import net.minecraft.core.world.WorldSource;
-import org.jetbrains.annotations.NotNull;
 
 public class CodpieBlock extends BlockEdible {
 	IconCoordinate slice = TextureRegistry.getTexture(ChaoticNeutral.MOD_ID + ":block/cod_pie_inside");
@@ -25,7 +24,7 @@ public class CodpieBlock extends BlockEdible {
 		float xMin = l >= 2 ? 0.5f : f;
 		float zMin = l >= 3 ? 0.5f : f;
 		float f2 = 0.5f;
-		this.setBlockBounds((double)xMin, 0.0, (double)zMin, (double)(1.0F - f), (double)f2, (double)(1.0F - f));
+		this.setBlockBounds(xMin, 0.0, zMin, (1.0F - f), f2, (1.0F - f));
 	}
 
 	public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int x, int y, int z, int meta, TileEntity tileEntity) {
@@ -38,7 +37,7 @@ public class CodpieBlock extends BlockEdible {
 		float xMin = l >= 2 ? 0.5f : f;
 		float zMin = l >= 3 ? 0.5f : f;
 		float f2 = 0.5625f;
-		return AABB.getBoundingBoxFromPool((double) ((float)x + xMin), (double)y, (double)((float)z + zMin), (double)((float)(x + 1) - f), (double)((float)y + f2 - f), (double)((float)(z + 1) - f));
+		return AABB.getBoundingBoxFromPool(((float)x + xMin), y, ((float)z + zMin), ((float)(x + 1) - f), ((float)y + f2 - f), ((float)(z + 1) - f));
 	}
 
 	public AABB getSelectedBoundingBoxFromPool( WorldSource world, int x, int y, int z) {
@@ -47,7 +46,7 @@ public class CodpieBlock extends BlockEdible {
 		float xMin = l >= 2 ? 0.5f : f;
 		float zMin = l >= 3 ? 0.5f : f;
 		float f2 = 0.5625f;
-		return AABB.getBoundingBoxFromPool((double)((float)x + xMin), (double)y, (double)((float)z + zMin), (double)((float)(x + 1) - f), (double)((float)y + f2 - f), (double)((float)(z + 1) - f));
+		return AABB.getBoundingBoxFromPool(((float)x + xMin), y, ((float)z + zMin), ((float)(x + 1) - f), ((float)y + f2 - f), ((float)(z + 1) - f));
 	}
 
 }

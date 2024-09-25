@@ -1,6 +1,5 @@
 package kirb.chaoticneutral.recipes;
 
-import kirb.chaoticneutral.ChaoticNeutral;
 import net.minecraft.core.data.registry.Registries;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
