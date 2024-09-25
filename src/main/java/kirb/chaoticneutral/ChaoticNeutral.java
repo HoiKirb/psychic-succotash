@@ -1,8 +1,10 @@
 package kirb.chaoticneutral;
 
 
+import kirb.chaoticneutral.block.ModBlocks;
 import kirb.chaoticneutral.entity.FlintlockProjectile;
 import kirb.chaoticneutral.item.ModItems;
+import kirb.chaoticneutral.recipes.ModItemGroups;
 import kirb.chaoticneutral.recipes.ModRecipesCrafting;
 import kirb.chaoticneutral.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
@@ -21,6 +23,8 @@ public class ChaoticNeutral implements ModInitializer, GameStartEntrypoint, Reci
     public void onInitialize() {
 		LOGGER.info("Initializing some wacky items...");
 		ModItems.init();
+		LOGGER.info("making blocks cause this game is called Cave Game");
+		ModBlocks.init();
 		LOGGER.info("and entities too while we are at it !");
 		//nothing here yet
 		LOGGER.info("Generating some sounds, otherwise we are deaf");
@@ -47,5 +51,6 @@ public class ChaoticNeutral implements ModInitializer, GameStartEntrypoint, Reci
 
 	@Override
 	public void initNamespaces() {
+		ModItemGroups.init();
 	}
 }

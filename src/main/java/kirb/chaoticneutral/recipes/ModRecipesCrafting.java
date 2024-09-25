@@ -1,6 +1,7 @@
 package kirb.chaoticneutral.recipes;
 
 import kirb.chaoticneutral.ChaoticNeutral;
+import kirb.chaoticneutral.block.ModBlocks;
 import kirb.chaoticneutral.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.block.Block;
@@ -60,6 +61,28 @@ public class ModRecipesCrafting {
 			.addInput(Item.string)
 			.create("penguin_plushy",new ItemStack(ModItems.penguin_plushy));
 
+		RecipeBuilder.Shapeless(ChaoticNeutral.MOD_ID)
+			.addInput(Block.wool, 6)
+			.addInput(Block.wool, 9)
+			.addInput(Block.wool, 10)
+			.addInput(Item.string)
+			.create("yomi_plushy",new ItemStack(ModItems.yomi_plushy));
+		// This is a Thaboar character that has been requested to be added by @Bigjango
+
+		RecipeBuilder.Shapeless(ChaoticNeutral.MOD_ID)
+			.addInput(Block.wool, 7)
+			.addInput(Block.wool, 10)
+			.addInput(Block.wool, 15)
+			.addInput(Item.string)
+			.create("spaceman_plushy",new ItemStack(ModItems.spaceman_plushy));
+
+		RecipeBuilder.Shapeless(ChaoticNeutral.MOD_ID)
+			.addInput(Block.wool, 0)
+			.addInput(Block.wool, 8)
+			.addInput(Block.wool, 15)
+			.addInput(Item.string)
+			.create("plaguedoc_plushy",new ItemStack(ModItems.plaguedoc_plushy));
+
 		RecipeBuilder.Shaped(ChaoticNeutral.MOD_ID)
 			.setShape(
 				"LS ",
@@ -87,6 +110,19 @@ public class ModRecipesCrafting {
 			.addInput(Item.ingotIron)
 			.addInput(Item.ingotIron)
 			.create("iron_bullet",new ItemStack(ModItems.iron_bullet, 2));
+
+		RecipeBuilder.Shaped(ChaoticNeutral.MOD_ID)
+			.setShape("WWW","WDW","CCC")
+			.addInput('W', Block.wool, 3)
+			.addInput('D', ("chaotic_neutral:records"))
+			.addInput('C', Item.cloth)
+			.create("miku_block", new ItemStack(ModBlocks.miku_block));
+
+	RecipeBuilder.Shapeless(ChaoticNeutral.MOD_ID)
+		.addInput(Item.jar)
+		.addInput(Item.dustSugar)
+		.addInput(ModItems.pepper)
+		.create("tabasco", new ItemStack(ModItems.tabasco));
 	}
 }
 
